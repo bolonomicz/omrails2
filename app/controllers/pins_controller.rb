@@ -1,8 +1,11 @@
 class PinsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index]
+
   # GET /pins
   # GET /pins.json
   def index
     @pins = Pin.all
+    
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +27,11 @@ class PinsController < ApplicationController
   # GET /pins/new
   # GET /pins/new.json
   def new
+<<<<<<< HEAD
       @pin = current_user.pins.new
+=======
+     @pin = current_user.pins.new
+>>>>>>> origin/master
 
     respond_to do |format|
       format.html # new.html.erb
@@ -56,7 +63,11 @@ class PinsController < ApplicationController
   # PUT /pins/1
   # PUT /pins/1.json
   def update
+<<<<<<< HEAD
     @pin = current_user.pins.find(params[:id])
+=======
+     @pin = current_user.pins.find(params[:id])
+>>>>>>> origin/master
 
     respond_to do |format|
       if @pin.update_attributes(params[:pin])
