@@ -5,19 +5,20 @@
             <p>
               <%= @pin.description %>
             </p>
-<<<<<<< HEAD
+
             <p>
               <%= @pin.user.name %>
             </p>
             <% if current_user == @pin.user %>
                 <%= link_to 'Edit', edit_pin_path(@pin) %> |
-=======
+            <% end %>
+
              <p>
               <%= @pin.user.name %>
             </p>
             <% if current_user == @pin.user %>
             	<%= link_to 'Edit', edit_pin_path(@pin) %> |
->>>>>>> origin/master
+
             <% end %>
             <%= link_to 'Back', pins_path %>
         </div>
